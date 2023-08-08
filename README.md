@@ -45,7 +45,7 @@
 - How will you raise concerns to members who are not adequately contributing?
   - Communicate with understanding and curiosity
 - How and when will you escalate the conflict if your resolution attempts are unsuccessful?
-  - Escalate to Adam privately first
+  - Escalate to Chris/Raul/Megan privately first
 - Communication Plan
 - Before beginning to tackle the project, determine how your group will communicate with each other. This is not an individual effort. Make sure everyone feels comfortable with the identified methods of speaking up.
 - Describe at least:
@@ -104,6 +104,8 @@
 - Slack at any time; DND is on during sleep hours (10 PM - 7 AM)
 - Respond within a reasonable time (~30 minutes during day)
 - Morning meetings talking about what we did the previous day
+
+### Schemas
 ```
 const userSchema = new Schema({
   firstName: {
@@ -132,7 +134,26 @@ const userSchema = new Schema({
     type: Date,
     required: [true, "Date of birth required"]
   },
-
 drinkFavorites: [{favorite 1}{favorite 2}]
+})
+
+const drinkSchema = new Schema({
+  drinkName: {
+    type: String,
+    required: [true, "Drink required"]
+  },
+  category: {
+    type: String,
+    required: [true, "Category required"]
+  },
+  glass: {
+    type: String,
+    required: [true, "Glass required"]
+  },
+  ingredients: [String]
+  recipe: {
+    type: String,
+    required: [true, "Recipe required"]
+  }
 })
 ```
