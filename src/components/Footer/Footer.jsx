@@ -1,6 +1,6 @@
 import './Footer.css'
 
 const Footer = () =>
-    <footer></footer>
+    <footer>© 2023 All Rights Reserved</footer>
 
 export default Footer
