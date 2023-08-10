@@ -9,32 +9,32 @@ const DrinkCreate = (props) => {
   let navigate = useNavigate()
 
   const [drink, setDrink] = useState({
-    name: '',
-    category: '',
-    instructions: '',
-    alcoholic: '',
-    glassType: '',
-    imgURL: '',
-    ingredientAmountFirst: '',
-    ingredientFirst: '',
-    ingredientAmountSecond: '',
-    ingredientSecond: '',
-    ingredientAmountThird: '',
-    ingredientThird: '',
-    ingredientAmountFourth: '',
-    ingredientFourth: '',
-    ingredientAmountFifth: '',
-    ingredientFifth: '',
-    ingredientAmountSixth: '',
-    ingredientSixth: '',
-    ingredientAmountSeventh: '',
-    ingredientSeventh: '',
-    ingredientAmountEighth: '',
-    ingredientEighth: '',
-    ingredientAmountNinth: '',
-    ingredientNinth: '',
-    ingredientAmountTenth: '',
-    ingredientTenth: '',
+    drinkName: '',
+    drinkCategory: '',
+    drinkInstructions: '',
+    drinkAlcoholic: '',
+    drinkGlassType: '',
+    drinkImage: '',
+    drinkMeasure1: '',
+    drinkIngredient1: '',
+    drinkMeasure2: '',
+    drinkIngredient2: '',
+    drinkMeasure3: '',
+    drinkIngredient3: '',
+    drinkMeasure4: '',
+    drinkIngredient4: '',
+    drinkMeasure5: '',
+    drinkIngredient5: '',
+    drinkMeasure6: '',
+    drinkIngredient6: '',
+    drinkMeasure7: '',
+    drinkIngredient7: '',
+    drinkMeasure8: '',
+    drinkIngredient8: '',
+    drinkMeasure9: '',
+    drinkIngredient9: '',
+    drinkMeasure10: '',
+    drinkIngredient10: '',
   })
 
   const handleChange = (event) => {
@@ -57,8 +57,8 @@ const DrinkCreate = (props) => {
         <input
           className='input-name'
           placeholder='Name'
-          value={drink.name}
-          name='name'
+          value={drink.drinkName}
+          name='drinkName'
           required
           autoFocus
           onChange={handleChange}
@@ -66,16 +66,16 @@ const DrinkCreate = (props) => {
         <input
           className='input-image-link'
           placeholder='Image Link'
-          value={drink.imgURL}
-          name='imgURL'
+          value={drink.drinkImage}
+          name='drinkImage'
           required
           onChange={handleChange}
         />
         <input
           className='input-category'
           placeholder='Category'
-          value={drink.category}
-          name='category'
+          value={drink.drinkCategory}
+          name='drinkCategory'
           required
           onChange={handleChange}
         />
@@ -83,167 +83,167 @@ const DrinkCreate = (props) => {
           className='textarea-instructions'
           rows={10}
           placeholder='Instructions'
-          value={drink.instructions}
-          name='instructions'
+          value={drink.drinkInstructions}
+          name='drinkInstructions'
           required
           onChange={handleChange}
         />
         <input
           className='input-alcoholic'
           placeholder='Alcoholic'
-          value={drink.alcoholic}
-          name='alcoholic'
+          value={drink.drinkAlcoholic}
+          name='drinkAlcoholic'
           required
           onChange={handleChange}
         />
         <input
           className='input-glass-type'
           placeholder='Glass type'
-          value={drink.glassType}
-          name='glassType'
+          value={drink.drinkGlassType}
+          name='drinkGlassType'
           required
           onChange={handleChange}
         />
         <input
            className='input-ingredient-amount-first'
            placeholder='First ingredient amount'
-           value={drink.ingredientAmountFirst}
-           name='ingredientAmountFirst'
+           value={drink.drinkMeasure1}
+           name='drinkMeasure1'
            required
            onChange={handleChange}
         />
         <input
           className='input-ingredient-first'
           placeholder='First ingredient'
-          value={drink.ingredientFirst}
-          name='ingredientFirst'
+          value={drink.drinkIngredient1}
+          name='drinkIngredient1'
           required
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-second'
           placeholder='Second ingredient amount'
-          value={drink.ingredientAmountSecond}
-          name='ingredientSecondAmount'
+          value={drink.drinkMeasure2}
+          name='drinkMeasure2'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-second'
           placeholder='Second ingredient'
-          value={drink.ingredientSecond}
-          name='ingredientSecond'
+          value={drink.drinkIngredient2}
+          name='drinkIngredient2'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-third'
           placeholder='Third ingredient amount'
-          value={drink.ingredientAmountThird}
-          name='ingredientAmountThird'
+          value={drink.drinkMeasure3}
+          name='drinkMeasure3'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-third'
           placeholder='Third ingredient'
-          value={drink.ingredientThird}
-          name='ingredientThird'
+          value={drink.drinkIngredient3}
+          name='drinkIngredient3'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-fourth'
           placeholder='Fourth ingredient amount'
-          value={drink.ingredientAmountFourth}
-          name='ingredientAmountFourth'
+          value={drink.drinkMeasure4}
+          name='drinkMeasure4'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-fourth'
           placeholder='Fourth ingredient'
-          value={drink.ingredientFourth}
-          name='ingredientFourth'
+          value={drink.drinkIngredient4}
+          name='drinkIngredient4'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-fifth'
           placeholder='Fifth ingredient amount'
-          value={drink.ingredientAmountFifth}
-          name='ingredientAmountFifth'
+          value={drink.drinkMeasure5}
+          name='drinkMeasure5'
           onChange={handleChange}
         />
         <input
         className='input-ingredient-fifth'
         placeholder='Fifth ingredient'
-        value={drink.ingredientFifth}
-        name='ingredientFifth'
+        value={drink.drinkIngredient5}
+        name='drinkIngredient5'
         onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-sixth'
           placeholder='Sixth ingredient amount'
-          value={drink.ingredientAmountSixth}
-          name='ingredientAmountSixth'
+          value={drink.drinkMeasure6}
+          name='drinkMeasure6'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-sixth'
           placeholder='Sixth ingredient'
-          value={drink.ingredientSixth}
-          name='ingredientSixth'
+          value={drink.drinkIngredient6}
+          name='drinkIngredient6'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-seventh'
           placeholder='Seventh ingredient amount'
-          value={drink.ingredientAmountSeven}
-          name='ingredientAmountSeventh'
+          value={drink.drinkMeasure7}
+          name='drinkMeasure7'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-seventh'
           placeholder='Seventh ingredient'
-          value={drink.ingredientSeven}
-          name='ingredientSeventh'
+          value={drink.drinkIngredient7}
+          name='drinkIngredient7'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-eighth'
           placeholder='Eighth ingredient amount'
-          value={drink.ingredientAmountEighth}
-          name='ingredientAmountEighth'
+          value={drink.drinkMeasure8}
+          name='drinkMeasure8'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-eighth'
           placeholder='Eighth ingredient'
-          value={drink.ingredientEighth}
-          name='ingredientEighth'
+          value={drink.drinkIngredient8}
+          name='drinkIngredient8'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-ninth'
           placeholder='Ninth ingredient amount'
-          value={drink.ingredientAmountNinth}
-          name='ingredientAmountNinth'
+          value={drink.drinkMeasure9}
+          name='drinkMeasure9'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-ninth'
           placeholder='Ninth ingredient'
-          value={drink.ingredientNinth}
-          name='ingredientNinth'
+          value={drink.drinkIngredient9}
+          name='drinkIngredient9'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-tenth'
           placeholder='Tenth ingredient amount'
-          value={drink.ingredientAmountTenth}
-          name='ingredientAmountTenth'
+          value={drink.drinkMeasure10}
+          name='drinkMeasure10'
           onChange={handleChange}
         />
         <input
           className='input-ingredient-tenth'
           placeholder='Tenth ingredient'
-          value={drink.ingredientTenth}
-          name='ingredientTenth'
+          value={drink.drinkIngredient10}
+          name='drinkIngredient10'
           onChange={handleChange}
         />
         <button type='submit' className='submit-button'>

@@ -62,36 +62,37 @@ const Drinks = (props) => {
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div className='drinks'>
-        {searchResult.map((drink, index) => {
+        {/* {searchResult.map((drink, index) => { */}
+        {drinks.map((drink, index) => {
           return (
             <Drink
-              _id={drink._id}
-              name={drink.name}
-              imgURL={drink.imgURL}
-              category={drink.category}
-              instructions={drink.instructions}
-              alcoholic={drink.alcoholic}
-              glassType={drink.glassType}
-              ingredientAmountFirst={drink.ingredientAmountFirst}
-              ingredientFirst={drink.ingredientFirst}
-              ingredientAmountSecond={drink.ingredientAmountSecond}
-              ingredientSecond={drink.ingredientSecond}
-              ingredientAmountThird={drink.ingredientAmountThird}
-              ingredientThird={drink.ingredientThird}
-              ingredientAmountFourth={drink.ingredientAmountFourth}
-              ingredientFourth={drink.ingredientFourth}
-              ingredientAmountFifth={drink.ingredientAmountFifth}
-              ingredientFifth={drink.ingredientFifth}
-              ingredientAmountSixth={drink.ingredientAmountSixth}
-              ingredientSixth={drink.ingredientSixth}
-              ingredientAmountSeventh={drink.ingredientAmountSeventh}
-              ingredientSeventh={drink.ingredientSeventh}
-              ingredientAmountEighth={drink.ingredientAmountEighth}
-              ingredientEighth={drink.ingredientEighth}
-              ingredientAmountNinth={drink.ingredientAmountNinth}
-              ingredientNinth={drink.ingredientNinth}
-              ingredientAmountTenth={drink.ingredientAmountTenth}
-              ingredientTenth={drink.ingredientTenth}
+              id={drink.id}
+              name={drink.drinkName}
+              drinkImage={drink.drinkImage}
+              drinkCategory={drink.drinkCategory}
+              drinkInstructions={drink.drinkInstructions}
+              drinkAlcoholic={drink.drinkAlcoholic}
+              drinkGlassType={drink.drinkGlassType}
+              drinkMeasure1={drink.drinkMeasure1}
+              drinkIngredient1={drink.drinkIngredient1}
+              drinkMeasure2={drink.drinkMeasure2}
+              drinkIngredient2={drink.drinkIngredient2}
+              drinkMeasure3={drink.drinkMeasure3}
+              drinkIngredient3={drink.drinkIngredient3}
+              drinkMeasure4={drink.drinkMeasure4}
+              drinkIngredient4={drink.drinkIngredient4}
+              drinkMeasure5={drink.drinkMeasure5}
+              drinkIngredient5={drink.drinkIngredient5}
+              drinkMeasure6={drink.drinkMeasure6}
+              drinkIngredient6={drink.drinkIngredient6}
+              drinkMeasure7={drink.drinkMeasure7}
+              drinkIngredient7={drink.drinkIngredient7}
+              drinkMeasure8={drink.drinkMeasure8}
+              drinkIngredient8={drink.drinkIngredient8}
+              drinkMeasure9={drink.drinkMeasure9}
+              drinkIngredient9={drink.drinkIngredient9}
+              drinkMeasure10={drink.drinkMeasure10}
+              drinkIngredient10={drink.drinkIngredient10}
               key={index}
             />
           )

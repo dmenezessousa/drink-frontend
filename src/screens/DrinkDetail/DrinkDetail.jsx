@@ -27,13 +27,11 @@ const DrinkDetail = (props) => {
       <div className='drink-detail'>
         <img
           className='drink-detail-image'
-          src={drink.imgURL}
-          alt={drink.name}
+          src={drink.drinkImage}
+          alt={drink.drinkName}
         />
         <div className='detail'>
-          <div className='name'>{drink.name}</div>
-          <div className='price'>{`$${drink.price}`}</div>
-          <div className='description'>{drink.description}</div>
+          <div className='name'>{drink.drinkName}</div>
           <div className='button-container'>
             <Link className='edit-button' to={`/drinks/${drink._id}/edit`}>
               Edit

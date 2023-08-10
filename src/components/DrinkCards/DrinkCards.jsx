@@ -19,9 +19,9 @@ const DrinkCards = () => {
     .map((drink, index) =>
       index < 8 ? (
         <DrinkCard
-          _id={drink._id}
-          name={drink.name}
-          imgURL={drink.imgURL}
+          id={drink.id}
+          drinkName={drink.drinkName}
+          drinkImage={drink.drinkImage}
           key={index}
         />
       ) : null
