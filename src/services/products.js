@@ -1,44 +1,44 @@
 import api from "./apiConfig";
 
-export const getProducts = async () => {
+export const getDrinks = async () => {
   try {
-    const response = await api.get("/products");
+    const response = await api.get("/drinks");
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const getProduct = async (id) => {
+export const getDrink = async (id) => {
   try {
-    const response = await api.get(`/products/${id}`);
+    const response = await api.get(`/drinks/${id}`);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createProduct = async (product) => {
+export const createDrink = async (drink) => {
   try {
-    const response = await api.post("/products", product);
+    const response = await api.post("/drinks", drink);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateProduct = async (id, product) => {
+export const updateDrink = async (id, drink) => {
   try {
-    const response = await api.put(`/products/${id}`, product);
+    const response = await api.put(`/drinks/${id}`, drink);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteProduct = async (id) => {
+export const deleteDrink = async (id) => {
   try {
-    const response = await api.delete(`/products/${id}`);
+    const response = await api.delete(`/drinks/${id}`);
     return response.data;
   } catch (error) {
     throw error;

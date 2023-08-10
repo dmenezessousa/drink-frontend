@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import './ProductCreate.css'
+import './DrinkCreate.css'
 import { Layout } from '../../components'
 import { useNavigate } from 'react-router-dom'
-import { createProduct } from '../../services/products'
+import { createDrink } from '../../services/drinks'
 
-const ProductCreate = (props) => {
+const DrinkCreate = (props) => {
 
   let navigate = useNavigate()
 
-  const [product, setProduct] = useState({
+  const [drink, setDrink] = useState({
     name: '',
     description: '',
     imgURL: '',
@@ -17,16 +17,16 @@ const ProductCreate = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    setProduct({
-      ...product,
+    setDrink({
+      ...drink,
       [name]: value,
     })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await createProduct(product)
-    navigate('/products')
+    await createDrink(drink)
+    navigate('/drinks')
   }
 
   return (
@@ -35,7 +35,7 @@ const ProductCreate = (props) => {
         <input
           className='input-name'
           placeholder='Name'
-          value={product.name}
+          value={drink.name}
           name='name'
           required
           autoFocus
@@ -44,7 +44,7 @@ const ProductCreate = (props) => {
         <input
           className='input-price'
           placeholder='Price'
-          value={product.price}
+          value={drink.price}
           name='price'
           required
           onChange={handleChange}
@@ -53,7 +53,7 @@ const ProductCreate = (props) => {
           className='textarea-description'
           rows={10}
           placeholder='Description'
-          value={product.description}
+          value={drink.description}
           name='description'
           required
           onChange={handleChange}
@@ -61,7 +61,7 @@ const ProductCreate = (props) => {
         <input
           className='input-image-link'
           placeholder='Image Link'
-          value={product.imgURL}
+          value={drink.imgURL}
           name='imgURL'
           required
           onChange={handleChange}
@@ -74,4 +74,4 @@ const ProductCreate = (props) => {
   )
 }
 
-export default ProductCreate
+export default DrinkCreate

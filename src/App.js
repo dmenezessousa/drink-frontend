@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./screens/Home/Home.jsx";
-import Products from "./screens/Products/Products.jsx";
-import ProductCreate from "./screens/ProductCreate/ProductCreate.jsx";
-import ProductEdit from "./screens/ProductEdit/ProductEdit.jsx";
-import ProductDetail from "./screens/ProductDetail/ProductDetail.jsx";
+import Drinks from "./screens/Drinks/Drinks.jsx";
+import DrinkCreate from "./screens/DrinkCreate/DrinkCreate.jsx";
+import DrinkEdit from "./screens/DrinkEdit/DrinkEdit.jsx";
+import DrinkDetail from "./screens/DrinkDetail/DrinkDetail.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { verifyUser } from "./services/users.js";
 import SignUp from "./screens/SignUp/SignUp.jsx";
@@ -29,18 +29,18 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
-        <Route path="/products" element={<Products user={user} />} />
+        <Route path="/drinks" element={<Drinks user={user} />} />
         <Route
           path="/add-product"
           element={
-            user ? <ProductCreate user={user} /> : <Navigate to="/sign-up" />
+            user ? <DrinkCreate user={user} /> : <Navigate to="/sign-up" />
           }
         />
         <Route
-          path="/products/:id/edit"
-          element={user ? <ProductEdit user={user} /> : <Navigate to="/" />}
+          path="/drinks/:id/edit"
+          element={user ? <DrinkEdit user={user} /> : <Navigate to="/" />}
         />
-        <Route path="/products/:id" element={<ProductDetail user={user} />} />
+        <Route path="/drinks/:id" element={<DrinkDetail user={user} />} />
       </Routes>
     </div>
   );

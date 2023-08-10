@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import './ProductEdit.css'
+import './DrinkEdit.css'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Layout } from '../../components'
-import { getProduct, updateProduct } from '../../services/products'
+import { getDrink, updateDrink } from '../../services/drinks'
 
-const ProductEdit = (props) => {
+const DrinkEdit = (props) => {
 
   let navigate = useNavigate()
 
-  const [product, setProduct] = useState({
+  const [drink, setDrink] = useState({
     name: '',
     description: '',
     imgURL: '',
@@ -18,41 +18,41 @@ const ProductEdit = (props) => {
   let { id } = useParams()
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const product = await getProduct(id)
-      setProduct(product)
+    const fetchDrink = async () => {
+      const drink = await getDrink(id)
+      setDrink(drink)
     }
-    fetchProduct()
+    fetchDrink()
   }, [id])
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    setProduct({
-      ...product,
+    setDrink({
+      ...drink,
       [name]: value,
     })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await updateProduct(id, product)
-    navigate(`/products/${id}`)
+    await updateDrink(id, drink)
+    navigate(`/drinks/${id}`)
   }
 
   return (
     <Layout user={props.user}>
-      <div className='product-edit'>
+      <div className='drink-edit'>
         <div className='image-container'>
           <img
-            className='edit-product-image'
-            src={product.imgURL}
-            alt={product.name}
+            className='edit-drink-image'
+            src={drink.imgURL}
+            alt={drink.name}
           />
           <form onSubmit={handleSubmit}>
             <input
               className='edit-input-image-link'
               placeholder='Image Link'
-              value={product.imgURL}
+              value={drink.imgURL}
               name='imgURL'
               required
               onChange={handleChange}
@@ -63,7 +63,7 @@ const ProductEdit = (props) => {
           <input
             className='input-name'
             placeholder='Name'
-            value={product.name}
+            value={drink.name}
             name='name'
             required
             autoFocus
@@ -72,7 +72,7 @@ const ProductEdit = (props) => {
           <input
             className='input-price'
             placeholder='Price'
-            value={product.price}
+            value={drink.price}
             name='price'
             required
             onChange={handleChange}
@@ -82,7 +82,7 @@ const ProductEdit = (props) => {
             rows={10}
             cols={78}
             placeholder='Description'
-            value={product.description}
+            value={drink.description}
             name='description'
             required
             onChange={handleChange}
@@ -96,4 +96,4 @@ const ProductEdit = (props) => {
   )
 }
 
-export default ProductEdit
+export default DrinkEdit
