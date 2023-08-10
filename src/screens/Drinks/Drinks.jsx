@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react'
-import './Products.css'
+import './Drinks.css'
 
-import { Layout, Product, Search, Sort } from '../../components'
+import { Layout, Drink, Search, Sort } from '../../components'
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
-import { getProducts } from '../../services/products'
+import { getDrinks } from '../../services/drinks'
 
-const Products = (props) => {
-  const [products, setProducts] = useState([])
+const Drinks = (props) => {
+  const [drinks, setDrinks] = useState([])
   const [searchResult, setSearchResult] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const allProducts = await getProducts()
-      setProducts(allProducts)
-      setSearchResult(allProducts)
+    const fetchDrinks = async () => {
+      const allDrinks = await getDrinks()
+      setDrinks(allDrinks)
+      setSearchResult(allDrinks)
     }
-    fetchProducts()
+    fetchDrinks()
   }, [])
 
   const handleSort = (type) => {
@@ -48,8 +48,8 @@ const Products = (props) => {
   }
 
   const handleSearch = (event) => {
-    const results = products.filter((product) =>
-      product.name.toLowerCase().includes(event.target.value.toLowerCase())
+    const results = drinks.filter((drink) =>
+      drink.name.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
     setApplySort(true)
@@ -61,14 +61,14 @@ const Products = (props) => {
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div className='products'>
-        {searchResult.map((product, index) => {
+      <div className='drinks'>
+        {searchResult.map((drink, index) => {
           return (
-            <Product
-              _id={product._id}
-              name={product.name}
-              imgURL={product.imgURL}
-              price={product.price}
+            <Drink
+              _id={drink._id}
+              name={drink.name}
+              imgURL={drink.imgURL}
+              price={drink.price}
               key={index}
             />
           )
@@ -78,4 +78,4 @@ const Products = (props) => {
   )
 }
 
-export default Products
+export default Drinks

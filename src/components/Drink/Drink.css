@@ -1,4 +1,4 @@
-.product {
+.drink {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,16 +9,16 @@
   margin-bottom: 60px;
 }
 
-.product:hover {
+.drink:hover {
   transform: scale(1.02);
   opacity: .9;
 }
 
-.product-image {
+.drink-image {
   width: 300px;
 }
 
-.product-name {
+.drink-name {
   font-size: 24px;
   padding: 10px;
 }
@@ -29,11 +29,11 @@
 }
 
 @media (max-width: 500px) {
-  .product {
+  .drink {
       width: 100%;
       margin-bottom: 20px;
   }
-  .product-image {
+  .drink-image {
       width: 180px;
       margin: 15px;
       padding: 10px;
