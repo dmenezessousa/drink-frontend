@@ -68,7 +68,30 @@ const Drinks = (props) => {
               _id={drink._id}
               name={drink.name}
               imgURL={drink.imgURL}
-              price={drink.price}
+              category={drink.category}
+              instructions={drink.instructions}
+              alcoholic={drink.alcoholic}
+              glassType={drink.glassType}
+              ingredientAmountFirst={drink.ingredientAmountFirst}
+              ingredientFirst={drink.ingredientFirst}
+              ingredientAmountSecond={drink.ingredientAmountSecond}
+              ingredientSecond={drink.ingredientSecond}
+              ingredientAmountThird={drink.ingredientAmountThird}
+              ingredientThird={drink.ingredientThird}
+              ingredientAmountFourth={drink.ingredientAmountFourth}
+              ingredientFourth={drink.ingredientFourth}
+              ingredientAmountFifth={drink.ingredientAmountFifth}
+              ingredientFifth={drink.ingredientFifth}
+              ingredientAmountSixth={drink.ingredientAmountSixth}
+              ingredientSixth={drink.ingredientSixth}
+              ingredientAmountSeventh={drink.ingredientAmountSeventh}
+              ingredientSeventh={drink.ingredientSeventh}
+              ingredientAmountEighth={drink.ingredientAmountEighth}
+              ingredientEighth={drink.ingredientEighth}
+              ingredientAmountNinth={drink.ingredientAmountNinth}
+              ingredientNinth={drink.ingredientNinth}
+              ingredientAmountTenth={drink.ingredientAmountTenth}
+              ingredientTenth={drink.ingredientTenth}
               key={index}
             />
           )
