@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './DrinkCards.css'
 import DrinkCard from '../DrinkCard/DrinkCard'
-import { getDrink } from '../../services/drinks'
+import { getDrinks } from '../../services/drinks'
 
 const DrinkCards = () => {
   const [drinks, setDrinks] = useState([])
@@ -18,7 +18,7 @@ const DrinkCards = () => {
     .reverse()
     .map((drink, index) =>
       index < 8 ? (
-        <ProductCard
+        <DrinkCard
           _id={drink._id}
           name={drink.name}
           imgURL={drink.imgURL}

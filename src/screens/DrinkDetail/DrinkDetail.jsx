@@ -40,7 +40,7 @@ const DrinkDetail = (props) => {
             </Link>
             <button
               className='delete-button'
-              onClick={() => deletedrink(drink._id)}
+              onClick={() => deleteDrink(drink._id)}
             >
               Delete
             </button>
