@@ -5,11 +5,9 @@
 - Adam Dawson
 - Danish Mansoor
 - Diego Sousa
-- Dan Sinensky(Git Maintainer)
-- Cooperation Plan
+- Dan Sinensky (Git Maintainer)
+### Cooperation Plan
 - Every person on your team is an asset. This is your chance to discover the hidden strengths and areas for growth for each team member.
-- Describe at least:
-- What are the key strengths of each person on the team?
 ## Personal Strengths
   - Adam - Backend/JS
   - Danish - Front End
