@@ -111,7 +111,7 @@ const Favorites = (props) => {
           {drinks.map((drink, index) => {
             return (
               <Drink
-                _id={drink._id}
+                id={drink._id}
                 drinkName={drink.drinkName}
                 drinkImage={drink.drinkImage}
                 drinkCategory={drink.drinkCategory}

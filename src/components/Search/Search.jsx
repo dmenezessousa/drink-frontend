@@ -1,7 +1,6 @@
 import './Search.css'
 
 const Search = (props) => {
-    e.preventDefault()
     return (
         <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
             <input
