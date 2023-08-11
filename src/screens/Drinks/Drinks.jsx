@@ -66,8 +66,8 @@ const Drinks = (props) => {
         {drinks.map((drink, index) => {
           return (
             <Drink
-              id={drink.id}
-              name={drink.drinkName}
+              _id={drink._id}
+              drinkName={drink.drinkName}
               drinkImage={drink.drinkImage}
               drinkCategory={drink.drinkCategory}
               drinkInstructions={drink.drinkInstructions}
