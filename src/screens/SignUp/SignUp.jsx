@@ -57,6 +57,7 @@ const SignUp = (props) => {
   const { username, email, password, passwordConfirmation } = form
 
   return (
+    <div className="sign-in-body-2">
     <div className='form-container'>
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
@@ -98,7 +99,8 @@ const SignUp = (props) => {
         />
         {renderError()}
       </form>
-    </div>
+      </div>
+      </div>
   )
 }
 
