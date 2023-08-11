@@ -91,7 +91,7 @@ const Drinks = (props) => {
           )
         })}
       </div>
-    // </Layout>
+    </Layout>
   )
 }
 
