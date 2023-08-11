@@ -54,6 +54,7 @@ button {
   align-items: center;
   margin-top: 3em;
 }
+
 .form-container {
   align-self: center;
   padding: 1em;
@@ -125,7 +126,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: Calc(100vh - 4em);
+  /* height: Calc(100vh - 4em); */
 }
 
 .layout .content {
