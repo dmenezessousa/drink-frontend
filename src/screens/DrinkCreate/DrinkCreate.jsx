@@ -12,7 +12,7 @@ const DrinkCreate = (props) => {
     drinkName: '',
     drinkCategory: '',
     drinkInstructions: '',
-    drinkAlcoholic: '',
+    drinkIsAlcoholic: '',
     drinkGlassType: '',
     drinkImage: '',
     drinkMeasure1: '',
@@ -91,8 +91,8 @@ const DrinkCreate = (props) => {
         <input
           className='input-alcoholic'
           placeholder='Alcoholic'
-          value={drink.drinkAlcoholic}
-          name='drinkAlcoholic'
+          value={drink.drinkIsAlcoholic}
+          name='drinkIsAlcoholic'
           required
           onChange={handleChange}
         />

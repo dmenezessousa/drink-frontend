@@ -12,7 +12,7 @@ const Favorites = (props) => {
     drinkName: '',
     drinkCategory: '',
     drinkInstructions: '',
-    drinkAlcoholic: '',
+    drinkIsAlcoholic: '',
     drinkGlassType: '',
     drinkImage: '',
     drinkMeasure1: '',
@@ -116,7 +116,7 @@ const Favorites = (props) => {
                 drinkImage={drink.drinkImage}
                 drinkCategory={drink.drinkCategory}
                 drinkInstructions={drink.drinkInstructions}
-                drinkAlcoholic={drink.drinkAlcoholic}
+                drinkIsAlcoholic={drink.drinkIsAlcoholic}
                 drinkGlassType={drink.drinkGlassType}
                 drinkMeasure1={drink.drinkMeasure1}
                 drinkIngredient1={drink.drinkIngredient1}
@@ -183,8 +183,8 @@ const Favorites = (props) => {
           <input
             className='input-alcoholic'
             placeholder='Alcoholic'
-            value={drink.drinkAlcoholic}
-            name='drinkAlcoholic'
+            value={drink.drinkIsAlcoholic}
+            name='drinkIsAlcoholic'
             required
             onChange={handleChange}
           />
