@@ -71,7 +71,7 @@ const Drinks = (props) => {
               drinkImage={drink.drinkImage}
               drinkCategory={drink.drinkCategory}
               drinkInstructions={drink.drinkInstructions}
-              drinkAlcoholic={drink.drinkAlcoholic}
+              drinkIsAlcoholic={drink.drinkIsAlcoholic}
               drinkGlassType={drink.drinkGlassType}
               drinkMeasure1={drink.drinkMeasure1}
               drinkIngredient1={drink.drinkIngredient1}

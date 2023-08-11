@@ -11,6 +11,7 @@ const DrinkDetail = (props) => {
 
   useEffect(() => {
     const fetchDrink = async () => {
+      console.log(id)
       const drink = await getDrink(id)
       setDrink(drink)
       setLoaded(true)
@@ -32,13 +33,27 @@ const DrinkDetail = (props) => {
         />
         <div className='detail'>
           <div className='name'>{drink.drinkName}</div>
+          <p>{drink.drinkCategory}</p>
+          <p>{drink.drinkIsAlcoholic}</p>
+          <p>{drink.drinkGlassType}</p>
+          <p>{drink.drinkMeasure1} {drink.drinkIngredient1}</p>
+          <p>{drink.drinkMeasure2} {drink.drinkIngredient2}</p>
+          <p>{drink.drinkMeasure3} {drink.drinkIngredient3}</p>
+          <p>{drink.drinkMeasure4} {drink.drinkIngredient4}</p>
+          <p>{drink.drinkMeasure5} {drink.drinkIngredient5}</p>
+          <p>{drink.drinkMeasure6} {drink.drinkIngredient6}</p>
+          <p>{drink.drinkMeasure7} {drink.drinkIngredient7}</p>
+          <p>{drink.drinkMeasure8} {drink.drinkIngredient8}</p>
+          <p>{drink.drinkMeasure9} {drink.drinkIngredient9}</p>
+          <p>{drink.drinkMeasure10} {drink.drinkIngredient10}</p>
+          <p>{drink.drinkInstructions}</p>
           <div className='button-container'>
-            <Link className='edit-button' to={`/drinks/${drink._id}/edit`}>
+            <Link className='edit-button' to={`/drinks/${drink.id}/edit`}>
               Edit
             </Link>
             <button
               className='delete-button'
-              onClick={() => deleteDrink(drink._id)}
+              onClick={() => deleteDrink(drink.id)}
             >
               Delete
             </button>
