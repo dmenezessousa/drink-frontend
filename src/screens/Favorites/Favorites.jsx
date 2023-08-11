@@ -3,7 +3,7 @@ import "./Favorites.css";
 import { useNavigate } from "react-router-dom";
 import { Layout, Search, Sort, Drink } from "../../components";
 import { getFavDrinks, createFavDrink } from "../../services/favorites";
-import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
+import { AZ, ZA } from '../../utils/sort';
 
 const Favorites = (props) => {
 
@@ -57,12 +57,12 @@ const Favorites = (props) => {
   const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
-    const fetchDrinks = async () => {
+    const fetchFavDrinks = async () => {
       const allFavDrinks = await getFavDrinks()
       setFavDrinks(allFavDrinks)
       setSearchResult(allFavDrinks)
     }
-    fetchDrinks()
+    fetchFavDrinks()
   }, [])
 
   const handleSort = (type) => {

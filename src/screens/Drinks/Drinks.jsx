@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Drinks.css'
-
 import { Layout, Drink, Search, Sort } from '../../components'
-import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
+import { AZ, ZA } from '../../utils/sort'
 import { getDrinks } from '../../services/drinks'
 
 const Drinks = (props) => {
