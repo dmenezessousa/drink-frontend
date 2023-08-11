@@ -19,7 +19,7 @@ const DrinkCards = () => {
     .map((drink, index) =>
       index < 8 ? (
         <DrinkCard
-          id={drink.id}
+          _id={drink._id}
           drinkName={drink.drinkName}
           drinkImage={drink.drinkImage}
           key={index}
