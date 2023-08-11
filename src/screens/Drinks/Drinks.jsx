@@ -49,7 +49,7 @@ const Drinks = (props) => {
 
   const handleSearch = (event) => {
     const results = drinks.filter((drink) =>
-      drink.name.toLowerCase().includes(event.target.value.toLowerCase())
+      drink.drinkName.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
     setApplySort(true)
@@ -66,7 +66,7 @@ const Drinks = (props) => {
         {drinks.map((drink, index) => {
           return (
             <Drink
-              _id={drink._id}
+              id={drink._id}
               drinkName={drink.drinkName}
               drinkImage={drink.drinkImage}
               drinkCategory={drink.drinkCategory}

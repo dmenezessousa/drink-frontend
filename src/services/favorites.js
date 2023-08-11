@@ -18,18 +18,18 @@ export const createFavDrink = async (drink) => {
   }
 };
 
-export const updateFavDrink = async (_id, drink) => {
+export const updateFavDrink = async (id, drink) => {
   try {
-    const response = await api.put(`/favorites/${_id}`, drink);
+    const response = await api.put(`/favorites/${id}`, drink);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteFavDrink = async (_id) => {
+export const deleteFavDrink = async (id) => {
   try {
-    const response = await api.delete(`/favorites/${_id}`);
+    const response = await api.delete(`/favorites/${id}`);
     return response.data;
   } catch (error) {
     throw error;
