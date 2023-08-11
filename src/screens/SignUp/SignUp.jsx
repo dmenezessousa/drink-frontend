@@ -31,6 +31,8 @@ const SignUp = (props) => {
     } catch (error) {
       console.error(error)
       setForm({
+        firstName: '',
+        lastName: '',
         username: '',
         email: '',
         password: '',
@@ -54,12 +56,31 @@ const SignUp = (props) => {
     }
   }
 
-  const { username, email, password, passwordConfirmation } = form
+  const { firstName, lastName, username, email, password, passwordConfirmation } = form
 
+  
   return (
     <div className='form-container'>
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
+        <label>First Name</label>
+        <input
+          required
+          type='text'
+          name='firstName'
+          value={firstName}
+          placeholder='Enter first name'
+          onChange={handleChange}
+        />
+        <label>Last Name</label>
+        <input
+          required
+          type='text'
+          name='lastName'
+          value={lastName}
+          placeholder='Enter last name'
+          onChange={handleChange}
+        />
         <label>Username</label>
         <input
           required

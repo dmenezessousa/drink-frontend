@@ -31,12 +31,6 @@ const Drinks = (props) => {
       case 'name-descending':
         setSearchResult(ZA(searchResult))
         break
-      case 'price-ascending':
-        setSearchResult(lowestFirst(searchResult))
-        break
-      case 'price-descending':
-        setSearchResult(highestFirst(searchResult))
-        break
       default:
         break
     }
