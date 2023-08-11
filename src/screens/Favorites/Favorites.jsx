@@ -3,6 +3,7 @@ import "./Favorites.css";
 import { useNavigate } from "react-router-dom";
 import { Layout, Search, Sort, Drink } from "../../components";
 import { getFavDrinks, createFavDrink } from "../../services/favorites";
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
 
 const Favorites = (props) => {
 
