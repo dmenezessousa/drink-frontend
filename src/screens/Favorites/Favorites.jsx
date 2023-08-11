@@ -3,6 +3,7 @@ import "./Favorites.css";
 import { useNavigate } from "react-router-dom";
 import { Layout, Search, Sort, Drink } from "../../components";
 import { getFavDrinks, createFavDrink } from "../../services/favorites";
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
 
 const Favorites = (props) => {
 
@@ -74,12 +75,6 @@ const Favorites = (props) => {
         break
       case 'name-descending':
         setSearchResult(ZA(searchResult))
-        break
-      case 'price-ascending':
-        setSearchResult(lowestFirst(searchResult))
-        break
-      case 'price-descending':
-        setSearchResult(highestFirst(searchResult))
         break
       default:
         break

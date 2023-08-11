@@ -1,7 +1,9 @@
-import { useState } from "react";
-import "./SignIn.css";
-import { signIn } from "../../services/users";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import './SignIn.css'
+import { signIn } from '../../services/users'
+import { useNavigate } from 'react-router-dom'
+import { Layout } from '../../components'
+
 
 const SignIn = (props) => {
   const navigate = useNavigate();
@@ -54,33 +56,40 @@ const SignIn = (props) => {
   const { email, password } = form;
 
   return (
-    <div className="sign-in-body">
-      <div className="form-container">
+
+    <Layout user={props.user}>
+        <div className="sign-in-body">
+      <div className='form-container'>
+
         <h3>Sign In</h3>
         <form onSubmit={onSignIn}>
           <label>Email</label>
           <input
             required
-            type="text"
-            name="email"
+            type='text'
+            name='email'
             value={email}
-            placeholder="Enter Email"
+            placeholder='Enter Email'
             onChange={handleChange}
           />
           <label>Password</label>
           <input
             required
-            name="password"
+            name='password'
             value={password}
-            type="password"
-            placeholder="Password"
+            type='password'
+            placeholder='Password'
             onChange={handleChange}
           />
           {renderError()}
         </form>
       </div>
     </div>
+    </Layout>
   );
 };
+  
+
+
 
 export default SignIn;

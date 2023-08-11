@@ -10,6 +10,7 @@ import { verifyUser } from "./services/users.js";
 import SignUp from "./screens/SignUp/SignUp.jsx";
 import SignIn from "./screens/SignIn/SignIn.jsx";
 import SignOut from "./screens/SignOut/SignOut.jsx";
+import Favorites from "./screens/Favorites/Favorites.jsx"
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -31,11 +32,12 @@ const App = () => {
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
         <Route path="/drinks" element={<Drinks user={user} />} />
         <Route
-          path="/add-product"
+          path="/add-drink"
           element={
             user ? <DrinkCreate user={user} /> : <Navigate to="/sign-up" />
           }
         />
+        <Route path="/favorites" element={<Favorites user={user} />} />
         <Route
           path="/drinks/:id/edit"
           element={user ? <DrinkEdit user={user} /> : <Navigate to="/" />}
