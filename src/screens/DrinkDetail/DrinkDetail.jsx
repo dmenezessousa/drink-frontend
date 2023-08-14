@@ -72,15 +72,17 @@ const DrinkDetail = (props) => {
           <p>{drink.drinkMeasure10} {drink.drinkIngredient10}</p>
           <p>{drink.drinkInstructions}</p>
           <div className='button-container'>
-            { user ? <Link className='edit-button' to={`/${drink._id}/edit`}>
+            {user ?
+              <Link className='edit-button' to={`/${drink._id}/edit`}>
               Edit
             </Link> : <></>}
-          <button
+            { user ?          <button
             className='favorite-button'
             onClick={() => addDrinkToFavorites(drink)}
           >
             Add to Favorites
-          </button>
+          </button> : <></>}
+
 
           </div>
         </div>
