@@ -30,12 +30,13 @@
 
 @media (max-width: 500px) {
   .drink {
-      width: 100%;
-      margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
   }
+
   .drink-image {
-      width: 180px;
-      margin: 15px;
-      padding: 10px;
+    width: 180px;
+    margin: 15px;
+    padding: 10px;
   }
 }

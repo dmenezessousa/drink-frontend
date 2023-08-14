@@ -79,15 +79,6 @@ const DrinkCreate = (props) => {
           required
           onChange={handleChange}
         />
-        <textarea
-          className='textarea-instructions'
-          rows={10}
-          placeholder='Instructions'
-          value={drink.drinkInstructions}
-          name='drinkInstructions'
-          required
-          onChange={handleChange}
-        />
         <input
           className='input-alcoholic'
           placeholder='Alcoholic'
@@ -244,6 +235,15 @@ const DrinkCreate = (props) => {
           placeholder='Tenth ingredient'
           value={drink.drinkIngredient10}
           name='drinkIngredient10'
+          onChange={handleChange}
+        />
+        <textarea
+          className='textarea-instructions'
+          rows={10}
+          placeholder='Instructions'
+          value={drink.drinkInstructions}
+          name='drinkInstructions'
+          required
           onChange={handleChange}
         />
         <button type='submit' className='submit-button'>
