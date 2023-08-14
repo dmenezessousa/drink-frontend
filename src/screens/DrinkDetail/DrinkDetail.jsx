@@ -4,6 +4,7 @@ import { Layout } from '../../components'
 import { getDrink, deleteDrink } from '../../services/drinks'
 import { useParams, Link } from 'react-router-dom'
 import { createFavDrink } from '../../services/favorites'
+import { verifyUser } from '../../services/users'
 
 const DrinkDetail = (props) => {
   const [drink, setDrink] = useState(null)
@@ -20,6 +21,15 @@ const DrinkDetail = (props) => {
     fetchDrink()
   }, [id])
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
 
   async function addDrinkToFavorites(favDrink) {
     try {
@@ -62,7 +72,9 @@ const DrinkDetail = (props) => {
           <p>{drink.drinkMeasure10} {drink.drinkIngredient10}</p>
           <p>{drink.drinkInstructions}</p>
           <div className='button-container'>
-
+            { user ? <Link className='edit-button' to={`/${drink._id}/edit`}>
+              Edit
+            </Link> : <></>}
           <button
             className='favorite-button'
             onClick={() => addDrinkToFavorites(drink)}

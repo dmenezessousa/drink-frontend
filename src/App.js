@@ -39,7 +39,7 @@ const App = () => {
         <Route
           path="/favorites" element={<Favorites user={user} />} />
         <Route
-          path="/drinks/:id/edit"
+          path="/:id/edit"
           element={user ? <DrinkEdit user={user} /> : <Navigate to="/" />}
         />
         <Route path="/update-user" element={<UpdateUser user={user} />} />
