@@ -20,7 +20,7 @@ export const getDrink = async (id) => {
 
 export const createDrink = async (drink) => {
   try {
-    const response = await api.post("/drinks", drink);
+    const response = await api.post("/drinks/create-drink", drink);
     return response.data;
   } catch (error) {
     throw error;

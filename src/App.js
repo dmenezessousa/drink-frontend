@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Home from "./screens/Home/Home.jsx";
 import Drinks from "./screens/Drinks/Drinks.jsx";
 import DrinkCreate from "./screens/DrinkCreate/DrinkCreate.jsx";
 import DrinkEdit from "./screens/DrinkEdit/DrinkEdit.jsx";
@@ -11,6 +10,7 @@ import SignUp from "./screens/SignUp/SignUp.jsx";
 import SignIn from "./screens/SignIn/SignIn.jsx";
 import SignOut from "./screens/SignOut/SignOut.jsx";
 import Favorites from "./screens/Favorites/Favorites.jsx"
+import UpdateUser from "./screens/UpdateUser/UpdateUser.jsx"
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -36,11 +36,13 @@ const App = () => {
             user ? <DrinkCreate user={user} /> : <Navigate to="/sign-up" />
           }
         />
-        <Route path="/favorites" element={<Favorites user={user} />} />
         <Route
-          path="/drinks/:id/edit"
+          path="/favorites" element={<Favorites user={user} />} />
+        <Route
+          path="/:id/edit"
           element={user ? <DrinkEdit user={user} /> : <Navigate to="/" />}
         />
+        <Route path="/update-user" element={<UpdateUser user={user} />} />
         <Route path="/drinks/:id" element={<DrinkDetail user={user} />} />
       </Routes>
     </div>
