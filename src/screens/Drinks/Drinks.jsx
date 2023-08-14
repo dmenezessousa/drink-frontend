@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Drinks.css'
-import { Layout, Drink, Search, Sort } from '../../components'
+import { Layout, Drink, Search } from '../../components'
 import { AZ, ZA } from '../../utils/sort'
 import { getDrinks } from '../../services/drinks'
 
@@ -53,7 +53,7 @@ const Drinks = (props) => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
+      {/* <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
       <div className='drinks'>
         {/* {searchResult.map((drink, index) => { */}
         {searchResult.map((drink, index) => {
