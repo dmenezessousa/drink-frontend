@@ -19,13 +19,6 @@ const DrinkDetail = (props) => {
     fetchDrink()
   }, [id])
 
-  // const addToFavorites = (props) => {
-  //   if (props.user && props.user.addToFavorites) {
-  //     props.user.addToFavorites(drink);
-  //     alert('Drink added to favorites!');
-  //   }
-  // };
-
   if (!isLoaded) {
     return <h1>Loading...</h1>
   }
@@ -64,9 +57,6 @@ const DrinkDetail = (props) => {
             >
               Delete
             </button>
-            {/* /* <button className='favorite-button' onClick={addToFavorites}>
-              Add to Favorites
-            </button> */}
           </div>
         </div>
       </div>
