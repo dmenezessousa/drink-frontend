@@ -11,6 +11,7 @@
         -Express
         -React
         -Node.js
+        -Heroku
         -JavaScript
         -HTML
         -CSS
@@ -33,7 +34,7 @@
     Kyle Harris - https://github.com/kyleharris007
     Diego Sousa - https://github.com/dmenezessousa
     Adam Dawson - https://github.com/adamdawson21
-    Danish Mansoor - https://github.com/danish4101/danish4101.github.io
+    Danish Mansoor - https://github.com/danish4101
     Dan Sinensky - https://github.com/dansinensky
 
 
