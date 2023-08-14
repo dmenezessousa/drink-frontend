@@ -1,5 +1,5 @@
 .drinks {
-  /* width: 90vw; */
+  /* width: 80vw; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

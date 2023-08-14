@@ -20,6 +20,7 @@ const DrinkDetail = (props) => {
     fetchDrink()
   }, [id])
 
+
   async function addDrinkToFavorites(favDrink) {
     try {
       await createFavDrink({
@@ -31,7 +32,7 @@ const DrinkDetail = (props) => {
       throw error
     }
   }
-
+  
   if (!isLoaded) {
     return <h1>Loading...</h1>
   }
@@ -61,12 +62,14 @@ const DrinkDetail = (props) => {
           <p>{drink.drinkMeasure10} {drink.drinkIngredient10}</p>
           <p>{drink.drinkInstructions}</p>
           <div className='button-container'>
+
           <button
             className='favorite-button'
             onClick={() => addDrinkToFavorites(drink)}
           >
             Add to Favorites
           </button>
+
           </div>
         </div>
       </div>
