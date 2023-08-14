@@ -5,7 +5,6 @@ const authenticatedOptions = (
     <>
         <NavLink className="link" to="/add-drink">Add Drink</NavLink>
         <NavLink className="link" to="/favorites">Favorites</NavLink>
-        <NavLink className="link" to="/update-user">Update User</NavLink>
         <NavLink className="link" to="/sign-out">Sign Out</NavLink>
     </>
 )
