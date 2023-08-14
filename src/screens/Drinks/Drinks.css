@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
 .drinks {
   /* width: 80vw; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 40px;
+  font-family: "Signika Negative", sans-serif;
 }
 
 .sort-container {
@@ -15,7 +18,7 @@
 
 label {
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Signika Negative", sans-serif;
   font-weight: bold;
   padding-right: 10px;
 }
