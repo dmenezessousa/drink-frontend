@@ -2,7 +2,7 @@
 
 
 # Introduction
-    This repository is a fully built out website using React. For this project, we utilized the Cocktail Database ()to list out a number of popular drinks, and how to make them. We also built out a backend that allows a user to be created and interact with the site. A user can sign up, pin their favorite drinks to the favorites page, create custom favorites unique to their account, and edit and delete those custom drinks.
+    This repository is a fully built out website using React. For this project, we utilized the Cocktail Database to list out a number of popular drinks, and how to make them. We also built out a backend that allows a user to be created and interact with the site. A user can sign up, pin their favorite drinks to the favorites page, create custom favorites unique to their account, and edit and delete those custom drinks.
 
 
 # Software Used
@@ -11,6 +11,8 @@
         -Express
         -React
         -Node.js
+        -Heroku
+        -Netlify
         -JavaScript
         -HTML
         -CSS
@@ -33,7 +35,7 @@
     Kyle Harris - https://github.com/kyleharris007
     Diego Sousa - https://github.com/dmenezessousa
     Adam Dawson - https://github.com/adamdawson21
-    Danish Mansoor - https://github.com/danish4101/danish4101.github.io
+    Danish Mansoor - https://github.com/danish4101
     Dan Sinensky - https://github.com/dansinensky
 
 

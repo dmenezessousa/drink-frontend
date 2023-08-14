@@ -26,11 +26,10 @@ const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Home user={user} />} />
+        <Route path="/" element={<Drinks user={user} />} />
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn  setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
-        <Route path="/drinks" element={<Drinks user={user} />} />
         <Route
           path="/add-drink"
           element={

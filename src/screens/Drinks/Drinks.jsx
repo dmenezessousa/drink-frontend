@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import './Drinks.css'
 import { Layout, Drink, Search } from '../../components'
-import { AZ, ZA } from '../../utils/sort'
 import { getDrinks } from '../../services/drinks'
 
 const Drinks = (props) => {
   const [drinks, setDrinks] = useState([])
   const [searchResult, setSearchResult] = useState([])
-  const [applySort, setApplySort] = useState(false)
-  const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
     const fetchDrinks = async () => {
@@ -19,33 +16,11 @@ const Drinks = (props) => {
     fetchDrinks()
   }, [])
 
-  const handleSort = (type) => {
-    if (type !== '' && type !== undefined) {
-      setSortType(type)
-    }
-    switch (type) {
-      case 'name-ascending':
-        setSearchResult(AZ(searchResult))
-        break
-      case 'name-descending':
-        setSearchResult(ZA(searchResult))
-        break
-      default:
-        break
-    }
-  }
-
-  if (applySort) {
-    handleSort(sortType)
-    setApplySort(false)
-  }
-
   const handleSearch = (event) => {
     const results = drinks.filter((drink) =>
       drink.drinkName?.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
-    setApplySort(true)
   }
 
   const handleSubmit = (event) => event.preventDefault()
@@ -53,9 +28,7 @@ const Drinks = (props) => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      {/* <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
       <div className='drinks'>
-        {/* {searchResult.map((drink, index) => { */}
         {searchResult.map((drink, index) => {
           return (
             <Drink

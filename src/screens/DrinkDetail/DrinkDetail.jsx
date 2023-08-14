@@ -3,6 +3,7 @@ import './DrinkDetail.css'
 import { Layout } from '../../components'
 import { getDrink, deleteDrink } from '../../services/drinks'
 import { useParams, Link } from 'react-router-dom'
+import { createFavDrink } from '../../services/favorites'
 
 const DrinkDetail = (props) => {
   const [drink, setDrink] = useState(null)
@@ -19,13 +20,19 @@ const DrinkDetail = (props) => {
     fetchDrink()
   }, [id])
 
-  // const addToFavorites = (props) => {
-  //   if (props.user && props.user.addToFavorites) {
-  //     props.user.addToFavorites(drink);
-  //     alert('Drink added to favorites!');
-  //   }
-  // };
 
+  async function addDrinkToFavorites(favDrink) {
+    try {
+      await createFavDrink({
+        id: favDrink._id,
+        drinkName: favDrink.drinkName,
+        drinkImage: favDrink.drinkImage
+      })
+    } catch (error) {
+      throw error
+    }
+  }
+  
   if (!isLoaded) {
     return <h1>Loading...</h1>
   }
@@ -55,18 +62,14 @@ const DrinkDetail = (props) => {
           <p>{drink.drinkMeasure10} {drink.drinkIngredient10}</p>
           <p>{drink.drinkInstructions}</p>
           <div className='button-container'>
-            <Link className='edit-button' to={`/drinks/${drink._id}/edit`}>
-              Edit
-            </Link>
-            <button
-              className='delete-button'
-              onClick={() => deleteDrink(drink.id)}
-            >
-              Delete
-            </button>
-            {/* /* <button className='favorite-button' onClick={addToFavorites}>
-              Add to Favorites
-            </button> */}
+
+          <button
+            className='favorite-button'
+            onClick={() => addDrinkToFavorites(drink)}
+          >
+            Add to Favorites
+          </button>
+
           </div>
         </div>
       </div>
