@@ -1,0 +1,41 @@
+.drink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 0px 3px 1px #CECECE;
+  transition: 250ms all;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.drink:hover {
+  transform: scale(1.02);
+  opacity: .9;
+}
+
+.drink-image {
+  width: 300px;
+}
+
+.drink-name {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.price {
+  font-size: 18px;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  .drink {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .drink-image {
+      width: 180px;
+      margin: 15px;
+      padding: 10px;
+  }
+}
