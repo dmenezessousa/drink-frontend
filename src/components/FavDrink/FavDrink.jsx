@@ -22,7 +22,8 @@ const FavDrink = (props) => {
             <img className="drink-image" src={props.drinkImage} alt={props.drinkName} />
           </Link>
           <div className="drink-name">{props.drinkName}</div>
-          <button
+          <button 
+            className='remove-fav-button'
             onClick={() => removeDrinkFromFavorites()}
           >
             Remove from Favorites
