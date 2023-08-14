@@ -12,6 +12,7 @@
         -React
         -Node.js
         -Heroku
+        -Netlify
         -JavaScript
         -HTML
         -CSS
