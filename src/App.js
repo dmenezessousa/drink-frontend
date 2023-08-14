@@ -10,7 +10,6 @@ import SignUp from "./screens/SignUp/SignUp.jsx";
 import SignIn from "./screens/SignIn/SignIn.jsx";
 import SignOut from "./screens/SignOut/SignOut.jsx";
 import Favorites from "./screens/Favorites/Favorites.jsx"
-import UpdateUser from "./screens/UpdateUser/UpdateUser.jsx"
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -42,7 +41,6 @@ const App = () => {
           path="/:id/edit"
           element={user ? <DrinkEdit user={user} /> : <Navigate to="/" />}
         />
-        <Route path="/update-user" element={<UpdateUser user={user} />} />
         <Route path="/drinks/:id" element={<DrinkDetail user={user} />} />
       </Routes>
     </div>
