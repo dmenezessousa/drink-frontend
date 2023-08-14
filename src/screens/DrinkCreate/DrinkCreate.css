@@ -10,43 +10,6 @@
   transition: all 2s ease;
 }
 
-/* input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
-
-input,
-textarea {
-  font-size: 48px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden;
-}
-
-textarea {
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.input-name {
-  font-size: 48px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.input-category {
-  padding-left: 10px;
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.input-image-link {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
 .submit-button {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
