@@ -9,9 +9,9 @@ export const getDrinks = async () => {
   }
 };
 
-export const getDrink = async (_id) => {
+export const getDrink = async (id) => {
   try {
-    const response = await api.get(`/drinks/${_id}`);
+    const response = await api.get(`/drinks/${id}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -27,18 +27,18 @@ export const createDrink = async (drink) => {
   }
 };
 
-export const updateDrink = async (_id, drink) => {
+export const updateDrink = async (id, drink) => {
   try {
-    const response = await api.put(`/drinks/${_id}`, drink);
+    const response = await api.put(`/drinks/${id}`, drink);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteDrink = async (_id) => {
+export const deleteDrink = async (id) => {
   try {
-    const response = await api.delete(`/drinks/${_id}`);
+    const response = await api.delete(`/drinks/${id}`);
     return response.data;
   } catch (error) {
     throw error;

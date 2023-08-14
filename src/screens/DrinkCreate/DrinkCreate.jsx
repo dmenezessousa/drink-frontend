@@ -50,7 +50,7 @@ const DrinkCreate = (props) => {
     await createDrink(drink)
     navigate('/drinks')
   }
-  
+
   return (
     <Layout user={props.user}>
       <form className='create-form' onSubmit={handleSubmit}>
@@ -105,12 +105,12 @@ const DrinkCreate = (props) => {
           onChange={handleChange}
         />
         <input
-           className='input-ingredient-amount-first'
-           placeholder='First ingredient amount'
-           value={drink.drinkMeasure1}
-           name='drinkMeasure1'
-           required
-           onChange={handleChange}
+          className='input-ingredient-amount-first'
+          placeholder='First ingredient amount'
+          value={drink.drinkMeasure1}
+          name='drinkMeasure1'
+          required
+          onChange={handleChange}
         />
         <input
           className='input-ingredient-first'
@@ -170,11 +170,11 @@ const DrinkCreate = (props) => {
           onChange={handleChange}
         />
         <input
-        className='input-ingredient-fifth'
-        placeholder='Fifth ingredient'
-        value={drink.drinkIngredient5}
-        name='drinkIngredient5'
-        onChange={handleChange}
+          className='input-ingredient-fifth'
+          placeholder='Fifth ingredient'
+          value={drink.drinkIngredient5}
+          name='drinkIngredient5'
+          onChange={handleChange}
         />
         <input
           className='input-ingredient-amount-sixth'
