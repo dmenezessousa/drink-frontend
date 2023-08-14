@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./Favorites.css";
-
 import Layout from "../../components/Layout/Layout.jsx";
 import FavDrink from "../../components/FavDrink/FavDrink";
 import { getFavDrinks } from "../../services/favorites";
