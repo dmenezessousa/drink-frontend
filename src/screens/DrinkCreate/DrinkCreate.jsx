@@ -53,9 +53,10 @@ const DrinkCreate = (props) => {
 
   return (
     <Layout user={props.user}>
-      <form className='create-form' onSubmit={handleSubmit}>
+      <form className='create-form-drink' onSubmit={handleSubmit}>
+        <label for="drinkName">Name</label>
         <input
-          className='input-name'
+          className='input-name-1'
           placeholder='Name'
           value={drink.drinkName}
           name='drinkName'
@@ -63,6 +64,7 @@ const DrinkCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
+        <label className="image-label" for="drinkImage">Image Link</label>
         <input
           className='input-image-link'
           placeholder='Image Link'
@@ -71,6 +73,7 @@ const DrinkCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <label for="drinkCategory">Category</label>
         <input
           className='input-category'
           placeholder='Category'
@@ -79,6 +82,7 @@ const DrinkCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <label for="drinkIsAlcoholic">Alcholic</label>
         <input
           className='input-alcoholic'
           placeholder='Alcoholic'
@@ -87,6 +91,7 @@ const DrinkCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <label for="drinkGlassType">Glass type</label>
         <input
           className='input-glass-type'
           placeholder='Glass type'
@@ -95,158 +100,131 @@ const DrinkCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <label for="drinkMeasure1">First ingredient amount</label>
         <input
-          className='input-ingredient-amount-first'
+          className='input-ingredient-amount-first amount first'
           placeholder='First ingredient amount'
           value={drink.drinkMeasure1}
           name='drinkMeasure1'
           required
           onChange={handleChange}
         />
+        <label for="drinkIngredient1">First ingredient</label>
         <input
-          className='input-ingredient-first'
+          className='input-ingredient-first ingredient first'
           placeholder='First ingredient'
           value={drink.drinkIngredient1}
           name='drinkIngredient1'
           required
           onChange={handleChange}
         />
+        <label for="drinkMeasure2">Second ingredient amount</label>
         <input
-          className='input-ingredient-amount-second'
+          className='input-ingredient-amount-second amount second'
           placeholder='Second ingredient amount'
           value={drink.drinkMeasure2}
           name='drinkMeasure2'
           onChange={handleChange}
         />
+        <label for="drinkIngredient2">Second ingredient</label>
         <input
-          className='input-ingredient-second'
+          className='input-ingredient-second ingredient second'
           placeholder='Second ingredient'
           value={drink.drinkIngredient2}
           name='drinkIngredient2'
           onChange={handleChange}
         />
+        <label for="drinkMeasure3">Third ingredient amount</label>
         <input
-          className='input-ingredient-amount-third'
+          className='input-ingredient-amount-third amount third'
           placeholder='Third ingredient amount'
           value={drink.drinkMeasure3}
           name='drinkMeasure3'
           onChange={handleChange}
         />
+        <label for="drinkIngredient3">Third ingredient</label>
         <input
-          className='input-ingredient-third'
+          className='input-ingredient-third ingredient third'
           placeholder='Third ingredient'
           value={drink.drinkIngredient3}
           name='drinkIngredient3'
           onChange={handleChange}
         />
+        <label for="drinkMeasure4">Fourth ingredient amount</label>
         <input
-          className='input-ingredient-amount-fourth'
+          className='input-ingredient-amount-fourth amount fourth'
           placeholder='Fourth ingredient amount'
           value={drink.drinkMeasure4}
           name='drinkMeasure4'
           onChange={handleChange}
         />
+        <label for="drinkIngredient4">Fourth ingredient</label>
         <input
-          className='input-ingredient-fourth'
+          className='input-ingredient-fourth ingredient fourth'
           placeholder='Fourth ingredient'
           value={drink.drinkIngredient4}
           name='drinkIngredient4'
           onChange={handleChange}
         />
+        <label for="drinkMeasure5">Fifth ingredient amount</label>
         <input
-          className='input-ingredient-amount-fifth'
+          className='input-ingredient-amount-fifth amount fifth'
           placeholder='Fifth ingredient amount'
           value={drink.drinkMeasure5}
           name='drinkMeasure5'
           onChange={handleChange}
         />
+        <label for="drinkIngredient5">Fifth ingredient</label>
         <input
-          className='input-ingredient-fifth'
+          className='input-ingredient-fifth ingredient fifth'
           placeholder='Fifth ingredient'
           value={drink.drinkIngredient5}
           name='drinkIngredient5'
           onChange={handleChange}
         />
+        <label for="drinkMeasure6">Sixth ingredient amount</label>
         <input
-          className='input-ingredient-amount-sixth'
+          className='input-ingredient-amount-sixth amount sixth'
           placeholder='Sixth ingredient amount'
           value={drink.drinkMeasure6}
           name='drinkMeasure6'
           onChange={handleChange}
         />
+        <label for="drinkIngredient6">Sixth ingredient</label>
         <input
-          className='input-ingredient-sixth'
+          className='input-ingredient-sixth ingredient sixth'
           placeholder='Sixth ingredient'
           value={drink.drinkIngredient6}
           name='drinkIngredient6'
           onChange={handleChange}
         />
+        <label for="drinkMeasure7">Seventh ingredient amount</label>
         <input
-          className='input-ingredient-amount-seventh'
+          className='input-ingredient-amount-seventh amount seventh'
           placeholder='Seventh ingredient amount'
           value={drink.drinkMeasure7}
           name='drinkMeasure7'
           onChange={handleChange}
         />
+        <label for="drinkIngredient7">Seventh ingredient</label>
         <input
-          className='input-ingredient-seventh'
+          className='input-ingredient-seventh ingredient seventh'
           placeholder='Seventh ingredient'
           value={drink.drinkIngredient7}
           name='drinkIngredient7'
           onChange={handleChange}
         />
-        <input
-          className='input-ingredient-amount-eighth'
-          placeholder='Eighth ingredient amount'
-          value={drink.drinkMeasure8}
-          name='drinkMeasure8'
-          onChange={handleChange}
-        />
-        <input
-          className='input-ingredient-eighth'
-          placeholder='Eighth ingredient'
-          value={drink.drinkIngredient8}
-          name='drinkIngredient8'
-          onChange={handleChange}
-        />
-        <input
-          className='input-ingredient-amount-ninth'
-          placeholder='Ninth ingredient amount'
-          value={drink.drinkMeasure9}
-          name='drinkMeasure9'
-          onChange={handleChange}
-        />
-        <input
-          className='input-ingredient-ninth'
-          placeholder='Ninth ingredient'
-          value={drink.drinkIngredient9}
-          name='drinkIngredient9'
-          onChange={handleChange}
-        />
-        <input
-          className='input-ingredient-amount-tenth'
-          placeholder='Tenth ingredient amount'
-          value={drink.drinkMeasure10}
-          name='drinkMeasure10'
-          onChange={handleChange}
-        />
-        <input
-          className='input-ingredient-tenth'
-          placeholder='Tenth ingredient'
-          value={drink.drinkIngredient10}
-          name='drinkIngredient10'
-          onChange={handleChange}
-        />
+        <label for="drinkInstructions">Instructions</label>
         <textarea
           className='textarea-instructions'
-          rows={10}
+          rows={5}
           placeholder='Instructions'
           value={drink.drinkInstructions}
           name='drinkInstructions'
           required
           onChange={handleChange}
         />
-        <button type='submit' className='submit-button'>
+        <button type='submit' className='submit-button add-drink-button'>
           Submit
         </button>
       </form>
