@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+.drinks {
+  /* width: 80vw; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.sort-container {
+  display: flex;
+  width: 83.5vw;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  .drinks {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sort-container {
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
+  }
+}
