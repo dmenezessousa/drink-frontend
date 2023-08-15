@@ -48,7 +48,7 @@ const DrinkCreate = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await createDrink(drink)
-    navigate('/')
+    navigate('/drinks')
   }
 
   return (
