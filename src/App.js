@@ -10,6 +10,7 @@ import SignUp from "./screens/SignUp/SignUp.jsx";
 import SignIn from "./screens/SignIn/SignIn.jsx";
 import SignOut from "./screens/SignOut/SignOut.jsx";
 import Favorites from "./screens/Favorites/Favorites.jsx"
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [user, setUser] = useState(null);

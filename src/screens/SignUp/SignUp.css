@@ -66,7 +66,6 @@ button {
   align-self: center;
   padding: 1em;
   width: 50%;
-  /* height: 80%; */
   margin: 4em auto;
   border: 2px solid #b0bec5;
   border-radius: 6px;
@@ -88,13 +87,14 @@ button {
   justify-content: center;
   margin: auto;
   width: 80%;
+
 }
 
 .form-container form input {
   width: 100%;
   padding: 0.6em 1em;
   margin: 0.5em auto;
-  font-size: 1rem;
+  font-size: 0.6rem !important;
   border-radius: 3px;
   border: 2px solid #e0e0e0;
   outline: none;
@@ -133,7 +133,6 @@ button {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  /* height: Calc(100vh - 4em); */
 }
 
 .layout .content {
@@ -272,7 +271,7 @@ button {
 }
 
 .alert {
-  /* background: #ef9a9a; */
+
   width: 400px;
   height: 200px;
   border-radius: 3px;
