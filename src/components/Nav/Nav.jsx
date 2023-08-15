@@ -16,14 +16,14 @@ const unauthenticatedOptions = (
 )
 const alwaysOptions = (
     <>
-        <NavLink className="link" to="/">Drinks</NavLink>
+        <NavLink className="link" to="/drinks">Drinks</NavLink>
     </>
 )
 const Nav = ({ user }) => {
         return (
             <nav>
                 <div className="nav">
-                    <NavLink className="logo" to="/">DrinkHub <img src={logo} alt="" /></NavLink>
+                    <NavLink className="logo" to="/drinks">DrinkHub <img src={logo} alt="" /></NavLink>
                     <div className="links">
                         {user && <div className="link welcome">Welcome, {user.username}</div>}
                         {alwaysOptions}

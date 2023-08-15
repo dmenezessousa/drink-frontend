@@ -26,7 +26,11 @@ const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Drinks user={user} />} />
+        <Route path="/" element={
+          <Navigate to="/sign-in"/>
+          }
+        />
+        <Route path="/drinks" element={<Drinks user={user}  />} />
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn  setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />
