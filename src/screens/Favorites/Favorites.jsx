@@ -22,18 +22,21 @@ const Favorites = (props) => {
 
     <>
       <Layout user={props.user}>
-        <div className='drinks'>
-          {favDrinks.length && favDrinks.map((drink, index) => {
-            return (
-              <FavDrink
-                _id={drink._id}
-                id={drink.id}
-                drinkName={drink.drinkName}
-                drinkImage={drink.drinkImage}
-                key={index}
-              />
+        <div className='FavDrinks'>
+          {
+            favDrinks.length === 0 ? <h3>No Favorites</h3> : favDrinks.length && favDrinks.map((drink, index) => (
+                <FavDrink
+                  _id={drink._id}
+                  id={drink.id}
+                  drinkName={drink.drinkName}
+                  drinkImage={drink.drinkImage}
+                  key={index}
+                />
+              )
             )
-          })}
+          
+          } 
+
         </div>
       </Layout>
     </>

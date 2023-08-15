@@ -1,6 +1,6 @@
 import './Nav.css'
 import { NavLink } from 'react-router-dom'
-
+import logo from "./cocktail.png"
 const authenticatedOptions = (
     <>
         <NavLink className="link" to="/add-drink">Add Drink</NavLink>
@@ -23,7 +23,7 @@ const Nav = ({ user }) => {
         return (
             <nav>
                 <div className="nav">
-                    <NavLink className="logo" to="/">DrinkHub</NavLink>
+                    <NavLink className="logo" to="/">DrinkHub <img src={logo} alt="" /></NavLink>
                     <div className="links">
                         {user && <div className="link welcome">Welcome, {user.username}</div>}
                         {alwaysOptions}
