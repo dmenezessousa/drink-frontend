@@ -44,7 +44,6 @@ const DrinkDetail = (props) => {
 
   async function addDrinkToFavorites(favDrink) {
     try {
-
       if(user.favoriteCocktails?.includes(favDrink._id)) {
         alert('Drink already in favorites')
         return
